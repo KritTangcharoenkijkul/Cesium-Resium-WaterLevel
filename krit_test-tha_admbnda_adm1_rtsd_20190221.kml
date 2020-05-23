@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:ns2="http://www.google.com/kml/ext/2.2" xmlns:ns3="http://www.w3.org/2005/Atom" xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <LookAt>
+            <longitude>101.36477268480942</longitude>
+            <latitude>13.072077242913139</latitude>
+            <altitude>2316457.304968391</altitude>
+            <heading>0.0</heading>
+            <tilt>0.0</tilt>
+            <range>1871819.0044693158</range>
+            <altitudeMode>clampToGround</altitudeMode>
+        </LookAt>
+        <NetworkLink>
+            <name>tha_admbnda_adm1_rtsd_20190221</name>
+            <visibility>1</visibility>
+            <open>1</open>
+            <LookAt>
+                <longitude>101.25553324889924</longitude>
+                <latitude>13.149755328660717</latitude>
+                <altitude>2888937.858880171</altitude>
+                <heading>0.0</heading>
+                <tilt>0.0</tilt>
+                <range>2334413.3195913085</range>
+                <altitudeMode>clampToGround</altitudeMode>
+            </LookAt>
+            <Url>
+                <href>http://localhost:8080/geoserver/krit_test/wms?service=wms&amp;request=GetMap&amp;version=1.1.1&amp;format=application/vnd.google-earth.kml+xml&amp;layers=krit_test:tha_admbnda_adm1_rtsd_20190221&amp;styles=polygon&amp;height=2048&amp;width=2048&amp;transparent=false&amp;srs=EPSG:4326&amp;format_options=AUTOFIT:true;KMATTR:true;KMPLACEMARK:false;KMSCORE:40;MODE:refresh;SUPEROVERLAY:false</href>
+                <refreshInterval>0.0</refreshInterval>
+                <viewRefreshMode>onStop</viewRefreshMode>
+                <viewRefreshTime>1.0</viewRefreshTime>
+                <viewBoundScale>1.0</viewBoundScale>
+            </Url>
+        </NetworkLink>
+    </Document>
+</kml>
