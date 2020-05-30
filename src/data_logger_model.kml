@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:ns2="http://www.google.com/kml/ext/2.2" xmlns:ns3="http://www.w3.org/2005/Atom" xmlns:ns4="urn:oasis:names:tc:ciq:xsdschema:xAL:2.0">
+    <Document>
+        <Schema name="data_logger_model_1" id="data_logger_model_1">
+            <SimpleField type="int" name="sensor"/>
+            <SimpleField type="int" name="water_level"/>
+            <SimpleField type="double" name="longitude"/>
+            <SimpleField type="double" name="latitude"/>
+            <SimpleField type="string" name="location"/>
+            <SimpleField type="string" name="date_and_time"/>
+        </Schema>
+        <Folder>
+            <name>data_logger_model</name>
+            <Placemark id="data_logger_model.1">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">92</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:11:36</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.2">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:12:03</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.3">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">66</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:12:15</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.4">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:12:41</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.5">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">51</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:12:53</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.6">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:13:20</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.7">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">83</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:13:32</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.8">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:13:58</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.9">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">10</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:14:10</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.10">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:14:37</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.11">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">88</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:14:49</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.12">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:15:15</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.13">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">52</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:15:27</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.14">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:15:54</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.15">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">99</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:16:06</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.16">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:16:33</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.17">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">13</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:16:45</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.18">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">1</SimpleData>
+                        <SimpleData name="water_level">0</SimpleData>
+                        <SimpleData name="longitude">100.7783</SimpleData>
+                        <SimpleData name="latitude">13.7299</SimpleData>
+                        <SimpleData name="location">KMITL</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:17:11</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+            <Placemark id="data_logger_model.19">
+                <ExtendedData>
+                    <SchemaData schemaUrl="#data_logger_model_1">
+                        <SimpleData name="sensor">2</SimpleData>
+                        <SimpleData name="water_level">62</SimpleData>
+                        <SimpleData name="longitude">100.6456</SimpleData>
+                        <SimpleData name="latitude">13.7628</SimpleData>
+                        <SimpleData name="location">BANGKAPI</SimpleData>
+                        <SimpleData name="date_and_time">26/05/2020 23:17:23</SimpleData>
+                    </SchemaData>
+                </ExtendedData>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>

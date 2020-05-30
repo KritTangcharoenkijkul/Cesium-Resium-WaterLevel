@@ -30,242 +30,168 @@
 
 
 
-
-// import React from "react";
-// import { Cartesian3 } from "cesium";
-// import { Viewer, Entity } from "resium";
-// import {Color} from "cesium";
-
+import React  from "react";
+import { Viewer,GeoJsonDataSource, KmlDataSource,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo } from "resium";
+import {  ArcGisMapServerImageryProvider, WebMapServiceImageryProvider, IonImageryProvider, Color, Button, Cesium,action, Cartesian3, Transforms } from "cesium";
+import glbs from "C:/Users/user/Desktop/craco-cesium-master/example/src/truesensor2.gltf";
 
 
-// export default class Cesium extends React.PureComponent {
-
-
-
-//   render() {
-
-//     return (
-
-      
-//       <Viewer full>
-
-//           url : 'http://localhost/cgi-bin/WMS',
-//           layers: 'villages'
-
-// 　　    <Entity
-//  　　       name="ฺBangkok"
-//             description="testing"
-//             position={Cartesian3.fromDegrees(101.794352, 14.750667, 100)}
-//             point={{ pixelSize: 10 }}>
-//             <h1>Hello, world.</h1>
-//             <p>This is description rendered as HTML string.</p>
-//         </Entity>
-
-//         <Entity
-//  　　       name="KMITL Water Sensor Node"
-//             description="This is KMITL water sensor node from Beam"
-//             position={Cartesian3.fromDegrees(100.794352, 13.750667, 100)}
-//             point={{ pixelSize: 10,  color: Color.YELLOW}}>
-//             <h1>Hello, this is sensor from Beam.</h1>
-//             <p>This is description of the node.</p>
-//         </Entity>
-        
-
-//       </Viewer>
-//     );
-//   }
-
-// }
-
-
-// import React from "react";
-// import { Viewer, Entity, PointGraphics, EntityDescription } from "resium";
-// import { Cartesian3 } from "cesium";
-// import { Cesium } from "cesium";
-
-// const position = Cartesian3.fromDegrees(-74.0707383, 40.7117244, 100);
-
-// const App = () => (
-//   <Viewer full>
-//     <Entity position={position} name="Tokyo">
-//       <PointGraphics pixelSize={10} />
-//       <EntityDescription>
-//         <h1>Hello, world.</h1>
-//         <p>JSX is available here!</p>
-//       </EntityDescription>
-//     </Entity>
-//   </Viewer>
-// );
-// export default App;
-
-
-// import React from "react";
-// import { Viewer, Cesium3DTileset } from "resium";
-// import { IonResource } from "cesium";
-// const App = () => {
-//   let viewer; // This will be raw Cesium's Viewer object.
-//   const handleReady = tileset => {
-//     if (viewer) {
-//       viewer.zoomTo(tileset);
-//     }
-//   };
-//   return (
-//     <Viewer
-//       full
-//       ref={e => {
-//         viewer = e && e.cesiumElement;
-//       }}>
-//       <Cesium3DTileset url={IonResource.fromAssetId(5714)} onReady={handleReady} />
-//     </Viewer>
-//   );
-// };
-
-// import React, { useState } from "react";
-// import { storiesOf } from "@storybook/react";
-// import { Color } from "cesium";
-// import { action } from "@storybook/addon-actions";
-
-// import Viewer from "../Viewer";
-// import GeoJsonDataSource from "./GeoJsonDataSource";
-
-// const data = {
+// const position1 = {
 //   type: "Feature",
 //   properties: {
-//     name: "Coors Field",
-//     amenity: "Baseball Stadium",
-//     popupContent: "This is where the Rockies play!",
+//     Sensor: "1",
+//     Water_Level: "0",
+//     Location: "LADKRABANG",
+//     Longitude: "100.7783",
+//     Latitude: "13.7628",
+//     Date_Time: "29/05/2020 13:42:09",
+//   },
+
+//   geometry: {
+//     type: "Point",
+//     coordinates: [100.7783, 13.7628],
+//   },
+// };
+
+// const position2 = {
+//   type: "Feature",
+//   properties: {
+//     Sensor: "2",
+//     Water_Level: "87",
+//     Location: "BANGKAPI",
+//     Longitude: "100.6456",
+//     Latitude: "13.7628",
+//     Date_Time: "29/05/2020 13:42:21", 
 //   },
 //   geometry: {
 //     type: "Point",
-//     coordinates: [-104.99404, 39.75621],
+//     coordinates: [100.6456, 13.7628],
 //   },
 // };
 
-// const onLoadAction = action("onLoad");
-
-// storiesOf("GeoJsonDataSource", module)
-//   .add("Basic", () => (
-//     <Viewer full>
-//       <GeoJsonDataSource
-//         data={data}
-//         markerColor={Color.RED}
-//         onLoad={g => {
-//           // You can process the data source here
-//           g.entities.values[0].name = "Coors Field!";
-//           onLoadAction(g);
-//         }}
-//         onError={action("onError")}
-//       />
-//     </Viewer>
-//   ))
-//   .add("Show", () => {
-//     const [show, setShow] = useState(true);
-//     return (
-//       <Viewer full>
-//         <button
-//           style={{ position: "absolute", top: "0", left: "0" }}
-//           onClick={() => setShow(s => !s)}>
-//           Toggle
-//         </button>
-//         <GeoJsonDataSource data={data} markerColor={Color.RED} show={show} />
-//       </Viewer>
-//     );
-//   });
-
-
-
-
-// const onLoadAction = action("onLoad");
-
-// const onLoad = (k: Cesium.KmlDataSource) => {
-//   // You can process the data source here
-//   k.entities.values[4].polygon.material = Color.RED;
-//   onLoadAction(k);
+// const position3 = {
+//   type: "Feature",
+//   properties: {
+//     Sensor: "3",
+//     Water_Level: "24",
+//     Location: "LADPRAO",
+//     Longitude: "100.6087",
+//     Latitude: "13.8242",
+//     Date_Time: "29/05/2020 13:41:16", 
+//   },
+//   geometry: {
+//     type: "Point",
+//     coordinates: [100.6087, 13.8242],
+//   },
 // };
 
-// storiesOf("KmlDataSource", module)
-//   .add("Basic", () => (
-//     <Viewer full>
-//       <KmlDataSource data={data} onLoad={onLoad} onError={action("onError")} />
-//     </Viewer>
-//   ))
-//   .add("Show", () => {
-//     const [show, setShow] = useState(true);
-//     return (
-//       <Viewer full>
-//         <button
-//           style={{ position: "absolute", top: "0", left: "0" }}
-//           onClick={() => setShow(s => !s)}>
-//           Toggle
-//         </button>
-//         <KmlDataSource data={data} show={show} />
-//       </Viewer>
-//     );
-//   });
-import React from "react";
-import { Viewer,GeoJsonDataSource, KmlDataSource,  ImageryLayer } from "resium";
-import {  ArcGisMapServerImageryProvider, WebMapServiceImageryProvider, IonImageryProvider, Cesium } from "cesium";
+const origin = Cartesian3.fromDegrees(100.7783, 13.7628, 0.0);
+const cameraDest = Cartesian3.fromDegrees(100.6456, 13.7628, 10);
+const cameraDest3 = Cartesian3.fromDegrees(100.6087, 13.8242, 10);
+const modelMatrix = Transforms.eastNorthUpToFixedFrame(origin);
+const modelMatrix2 = Transforms.eastNorthUpToFixedFrame(cameraDest);
+const modelMatrix3 = Transforms.eastNorthUpToFixedFrame(cameraDest3);
 
-const data = {
-  type: "Feature",
-  properties: {
-    name: "Bangkok",
-    amenity: "KMITL University",
-    WaterLevel: "5.8 cm",
-    WaterQuality: "50 %",
-    Date_Time: "23 April 2020 18:00", 
-    popupContent: "This is where Beam Sensor is!",
-  },
-  geometry: {
-    type: "Point",
-    coordinates: [101.794352, 14.750667],
-    fill: "Cesium.Color.RED",
-  },
-};
 
-const data2 = {
-  type: "Feature",
-  properties: {
-    name: "KMITL",
-    amenity: "Thai Sensor",
-    WaterLevel: "7.8 cm",
-    WaterQuality: "60 %",
-    Date_Time: "23 April 2020 18:00", 
-    popupContent: "This is another sensor!",
-  },
-  geometry: {
-    type: "Point",
-    coordinates: [100.794352, 15.750667],
-  },
-};
 
 
 const App = () => (
-  <Viewer full>
+  <addToolbarMenu>
 
-    <GeoJsonDataSource data={"your_geo_json.geojson"} />
-    <KmlDataSource url={"C:/Users/user/Desktop/craco-cesium-master/example/krit_test-tha_admbnda_adm1_rtsd_20190221.kml"} />
-    <GeoJsonDataSource data={data} />
-    <GeoJsonDataSource data={data2} />
+    
+  
+  {/* <Viewer imageryProvider={false}> */}
+
+  <Viewer>
+
+    {/* <CameraFlyTo destination={cameraDest} duration={0} /> */}
+    <Model url={glbs}
+    modelMatrix={modelMatrix}
+    minimumPixelSize={128}
+    maximumScale={20000}
+     />
+
+    <Model url={glbs}
+    modelMatrix={modelMatrix2}
+    minimumPixelSize={128}
+    maximumScale={20000}
+     />
+
+    <Model url={glbs}
+    modelMatrix={modelMatrix3}
+    minimumPixelSize={128}
+    maximumScale={20000}
+     />
 
     <ImageryLayer
-      imageryProvider={
-        new ArcGisMapServerImageryProvider({
-          url: "//services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
-        }),
+      imageryProvider={  
 
         new WebMapServiceImageryProvider({
-          url : 'http://localhost:8080/geoserver/krit_test/wms?service=WMS&version=1.1.0&request=GetMap&layers=krit_test%3AKritTest&bbox=-180.0%2C-89.99892578%2C180.0%2C83.59960938&width=768&height=370&srs=EPSG%3A4326&format=application/openlayers',
-          layers : '0',
+          url : 'http://localhost:8080/geoserver/wms',
+          layers : 'WaterLevelSystem:data_logger_model_new',
+          proxy : 'http://localhost:8080/geoserver/ows',
+          style: "default",
+          tileMatrixSetID: "250m",
+          maximumLevel: 5,
+          getFeatureInfoAsGeoJson: true,
+          parameters: {
+            transparent : true,
+            tiled : true,
+            format : 'image/png'
+          },
         })
       }
     />
-    <ImageryLayer alpha={0.5} imageryProvider={new IonImageryProvider({ assetId: 3812 })} />
 
+    <GeoJsonDataSource data={"your_geo_json.geojson"} />
     
-    
+{/*     
+    <KmlDataSource url={"C:/Users/user/Desktop/craco-cesium-master/example/src/data_logger_model_new.kml"} /> */}
+    {/* <GeoJsonDataSource data={position1} markerColor={Color.YELLOW}/>
+    <GeoJsonDataSource data={position2} markerColor={Color.YELLOW}/>
+    <GeoJsonDataSource data={position3} markerColor={Color.YELLOW}/> */}
 
   </Viewer>
+
+  </addToolbarMenu>
 );
 
+
 export default App;
+
+
+
+
+
+
+
+
+
+// import React  from "react";
+// import { Viewer,GeoJsonDataSource, KmlDataSource,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo } from "resium";
+// import {  ArcGisMapServerImageryProvider, WebMapServiceImageryProvider, IonImageryProvider, Color, Button, Cesium,action, Cartesian3, Transforms } from "cesium";
+// import glbs from "C:/Users/user/Desktop/craco-cesium-master/example/src/truesensor2.gltf";
+
+// const App = () => (
+//   <Viewer>
+// <ImageryLayer
+//       imageryProvider={  
+
+//         new WebMapServiceImageryProvider({
+//           url: 'http://localhost:8080/geoserver/wms',
+//           layers : 'WaterLevelSystem:data_logger_model_new',
+//           maximumLevel: 5,
+//           getFeatureInfoAsGeoJson: true,
+//           parameters: {
+//             transparent: true,
+//             format : 'image/png'
+//           },
+//         })
+//       }
+//     />
+
+//   </Viewer>
+//   );
+
+
+//   export default App;
