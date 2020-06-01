@@ -29,82 +29,37 @@
 
 
 
-
-import React  from "react";
-import { Viewer,GeoJsonDataSource, KmlDataSource,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo } from "resium";
-import {  ArcGisMapServerImageryProvider, WebMapServiceImageryProvider, IonImageryProvider, Color, Button, Cesium,action, Cartesian3, Transforms } from "cesium";
+import React, { useState }  from 'react';
+import { Viewer,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo, ImageryLayerCollection } from 'resium';
+import {  WebMapServiceImageryProvider, Camera, Color, button, Cesium, Cartesian3, Transforms, ImageryProviderViewModel, ProviderViewModel } from 'cesium';
 import glbs from "C:/Users/user/Desktop/craco-cesium-master/example/src/truesensor2.gltf";
 
 
-// const position1 = {
-//   type: "Feature",
-//   properties: {
-//     Sensor: "1",
-//     Water_Level: "0",
-//     Location: "LADKRABANG",
-//     Longitude: "100.7783",
-//     Latitude: "13.7628",
-//     Date_Time: "29/05/2020 13:42:09",
-//   },
-
-//   geometry: {
-//     type: "Point",
-//     coordinates: [100.7783, 13.7628],
-//   },
-// };
-
-// const position2 = {
-//   type: "Feature",
-//   properties: {
-//     Sensor: "2",
-//     Water_Level: "87",
-//     Location: "BANGKAPI",
-//     Longitude: "100.6456",
-//     Latitude: "13.7628",
-//     Date_Time: "29/05/2020 13:42:21", 
-//   },
-//   geometry: {
-//     type: "Point",
-//     coordinates: [100.6456, 13.7628],
-//   },
-// };
-
-// const position3 = {
-//   type: "Feature",
-//   properties: {
-//     Sensor: "3",
-//     Water_Level: "24",
-//     Location: "LADPRAO",
-//     Longitude: "100.6087",
-//     Latitude: "13.8242",
-//     Date_Time: "29/05/2020 13:41:16", 
-//   },
-//   geometry: {
-//     type: "Point",
-//     coordinates: [100.6087, 13.8242],
-//   },
-// };
-
-const origin = Cartesian3.fromDegrees(100.7783, 13.7628, 0.0);
-const cameraDest = Cartesian3.fromDegrees(100.6456, 13.7628, 10);
-const cameraDest3 = Cartesian3.fromDegrees(100.6087, 13.8242, 10);
+// Model
+const origin = Cartesian3.fromDegrees(100.7783, 13.7628, 10000.0);
+const cameraDest = Cartesian3.fromDegrees(100.6456, 13.7628, 50);
+const cameraDest3 = Cartesian3.fromDegrees(100.6087, 13.8242, 50);
 const modelMatrix = Transforms.eastNorthUpToFixedFrame(origin);
 const modelMatrix2 = Transforms.eastNorthUpToFixedFrame(cameraDest);
 const modelMatrix3 = Transforms.eastNorthUpToFixedFrame(cameraDest3);
 
 
-
+// Camera
 
 const App = () => (
-  <addToolbarMenu>
-
-    
-  
-  {/* <Viewer imageryProvider={false}> */}
 
   <Viewer>
 
-    {/* <CameraFlyTo destination={cameraDest} duration={0} /> */}
+
+  <addToolbarMenu>
+
+
+    
+  
+    <CameraFlyTo destination={cameraDest} duration={5} />
+
+
+  </addToolbarMenu>
     <Model url={glbs}
     modelMatrix={modelMatrix}
     minimumPixelSize={128}
@@ -124,12 +79,14 @@ const App = () => (
      />
 
     <ImageryLayer
+
+
       imageryProvider={  
 
         new WebMapServiceImageryProvider({
-          url : 'http://localhost:8080/geoserver/wms',
-          layers : 'WaterLevelSystem:data_logger_model_new',
-          proxy : 'http://localhost:8080/geoserver/ows',
+          url : 'http://ec2-18-204-20-186.compute-1.amazonaws.com:8080/geoserver/wms',
+          layers : 'WaterLevelSystem:data_logger_model',
+          proxy : 'http://ec2-18-204-20-186.compute-1.amazonaws.com:8080/geoserver/ows',
           style: "default",
           tileMatrixSetID: "250m",
           maximumLevel: 5,
@@ -141,19 +98,19 @@ const App = () => (
           },
         })
       }
-    />
 
-    <GeoJsonDataSource data={"your_geo_json.geojson"} />
+      // ImageryProviderViewModel={
+      //   new ImageryProviderViewModel({
+      //     name : 'Water Level Sensor'
+      //   })
+      // }
+      // isBaseLayer={true}
+    />
     
-{/*     
-    <KmlDataSource url={"C:/Users/user/Desktop/craco-cesium-master/example/src/data_logger_model_new.kml"} /> */}
-    {/* <GeoJsonDataSource data={position1} markerColor={Color.YELLOW}/>
-    <GeoJsonDataSource data={position2} markerColor={Color.YELLOW}/>
-    <GeoJsonDataSource data={position3} markerColor={Color.YELLOW}/> */}
+
 
   </Viewer>
 
-  </addToolbarMenu>
 );
 
 
@@ -161,37 +118,3 @@ export default App;
 
 
 
-
-
-
-
-
-
-// import React  from "react";
-// import { Viewer,GeoJsonDataSource, KmlDataSource,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo } from "resium";
-// import {  ArcGisMapServerImageryProvider, WebMapServiceImageryProvider, IonImageryProvider, Color, Button, Cesium,action, Cartesian3, Transforms } from "cesium";
-// import glbs from "C:/Users/user/Desktop/craco-cesium-master/example/src/truesensor2.gltf";
-
-// const App = () => (
-//   <Viewer>
-// <ImageryLayer
-//       imageryProvider={  
-
-//         new WebMapServiceImageryProvider({
-//           url: 'http://localhost:8080/geoserver/wms',
-//           layers : 'WaterLevelSystem:data_logger_model_new',
-//           maximumLevel: 5,
-//           getFeatureInfoAsGeoJson: true,
-//           parameters: {
-//             transparent: true,
-//             format : 'image/png'
-//           },
-//         })
-//       }
-//     />
-
-//   </Viewer>
-//   );
-
-
-//   export default App;
