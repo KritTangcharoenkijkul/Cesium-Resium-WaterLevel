@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Cesium-Resium-WaterLevel/precache-manifest.182cdc47f0e143dab307265c2689ae81.js"
+  "/Cesium-Resium-WaterLevel/precache-manifest.12952db3fcbd3a15d1998f171338bb67.js"
 );
 
 self.addEventListener('message', (event) => {
