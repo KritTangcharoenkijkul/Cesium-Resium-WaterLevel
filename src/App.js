@@ -173,7 +173,7 @@ const App = () => (
 
         new WebMapServiceImageryProvider({
           url : 'http://ec2-18-204-20-186.compute-1.amazonaws.com:8080/geoserver/wms',
-          layers : 'WaterLevelSystem:data_logger_model',
+          layers : 'WaterLevelSystem:data_logger_model_wms',
           // layers : 'WaterLevelSystem:data_logger_model',
           proxy : 'http://ec2-18-204-20-186.compute-1.amazonaws.com:8080/geoserver/ows',
           style: "default",
