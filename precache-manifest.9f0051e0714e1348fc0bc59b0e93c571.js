@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1a6cb6ea9d523633da0dbfa24e930912",
+    "revision": "a016d7ba7441fc5f0bdbc5f4d68d73cb",
     "url": "/Cesium-Resium-WaterLevel/index.html"
   },
   {
-    "revision": "6cb297494af2ff388976",
+    "revision": "e00c677b8a3fd5f492fc",
     "url": "/Cesium-Resium-WaterLevel/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Cesium-Resium-WaterLevel/static/js/2.0e2e559b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6cb297494af2ff388976",
-    "url": "/Cesium-Resium-WaterLevel/static/js/main.868fe68e.chunk.js"
+    "revision": "e00c677b8a3fd5f492fc",
+    "url": "/Cesium-Resium-WaterLevel/static/js/main.e5c4178f.chunk.js"
   },
   {
     "revision": "0985ce76e50f2262261c",
