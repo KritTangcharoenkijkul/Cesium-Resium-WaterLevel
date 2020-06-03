@@ -144,7 +144,7 @@ const App = () => (
 
   <addToolbarMenu>
 
-    <CameraFlyTo destination={cameraseen} duration={5} />
+    {/* <CameraFlyTo destination={cameraseen} duration={5} /> */}
 
   </addToolbarMenu>
     <Model url={glbs}
@@ -173,10 +173,12 @@ const App = () => (
 
         new WebMapServiceImageryProvider({
           url : 'http://ec2-18-204-20-186.compute-1.amazonaws.com:8080/geoserver/wms',
-          layers : 'WaterLevelSystem:data_logger_model',
-          proxy : 'http://ec2-18-204-20-186.compute-1.amazonaws.com:8080/geoserver/ows',
+          layers : 'WaterLevelSystem:data_logger_model_wms',
+          // layers : 'WaterLevelSystem:data_logger_model',
+          // proxy : 'http://ec2-18-204-20-186.compute-1.amazonaws.com:8080/geoserver/ows',
           style: "default",
           tileMatrixSetID: "250m",
+          serverType : 'geoserver',
           maximumLevel: 5,
           parameters: {
             transparent : true,
