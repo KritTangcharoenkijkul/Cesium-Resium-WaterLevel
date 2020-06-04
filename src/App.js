@@ -172,13 +172,12 @@ const App = () => (
       imageryProvider={ 
 
         new WebMapServiceImageryProvider({
-          url : 'http://54.144.151.196:8080/geoserver/wms',
-          layers : 'tiger:poly_landmarks',
           
-          // url : 'http://54.144.151.196:8080/geoserver/wms',
+          
+          url : 'http://34.201.61.135:8080/geoserver/wms',
+          layers : 'WaterLevelSystem:data_logger_model',
           // layers : 'WaterLevelSystem:data_logger_model',
-          // layers : 'WaterLevelSystem:data_logger_model',
-          proxy : 'http://54.144.151.196:8080/geoserver/ows',
+          proxy : 'http://34.201.61.135:8080/geoserver/ows',
           style: "default",
           tileMatrixSetID: "250m",
           maximumLevel: 5,
