@@ -119,8 +119,8 @@
 
 
 import React from "react";
-import { Viewer,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo, ImageryLayerCollection } from "resium";
-import {  WebMapServiceImageryProvider, Camera, Color, button, Ion, Cesium, Cartesian3, Transforms, BingMapsApi, ImageryProviderViewModel, ProviderViewModel } from "cesium";
+import { Viewer,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo, ImageryLayerCollection, GeoJsonDataSource } from "resium";
+import {  WebMapServiceImageryProvider, Camera, Color, button, Ion, Cesium,  Cartesian3, Transforms, BingMapsApi, ImageryProviderViewModel, ProviderViewModel } from "cesium";
 import glbs from "C:/Users/user/Desktop/craco-cesium-master/example/src/truesensor2.gltf";
 import './App.css'
 
@@ -135,6 +135,53 @@ const modelMatrix2 = Transforms.eastNorthUpToFixedFrame(cameraDest);
 const modelMatrix3 = Transforms.eastNorthUpToFixedFrame(cameraDest3);
 const cameraseen = Cartesian3.fromDegrees(100.7783, 13.7628);
 
+const data = {
+  type: "Feature",
+  properties: {
+    sensor: "1",
+    water_level: "51",
+    longitude: "100.7763",
+    latitude: "13.7299",
+    date: "04/06/2020",
+    time: "19:20:36",
+  },
+  geometry: {
+    type: "Point",
+    coordinates: [100.7783, 13.7628],
+  },
+};
+
+const data2 = {
+  type: "Feature",
+  properties: {
+    sensor: "2",
+    water_level: "63",
+    longitude: "100.6087",
+    latitude: "13.8242",
+    date: "04/06/2020",
+    time: "19:20:37",
+  },
+  geometry: {
+    type: "Point",
+    coordinates: [100.6087, 13.8242],
+  },
+};
+
+const data3 = {
+  type: "Feature",
+  properties: {
+    sensor: "3",
+    water_level: "12",
+    longitude: "100.6456",
+    latitude: "13.7628",
+    date: "04/06/2020",
+    time: "19:25:37",
+  },
+  geometry: {
+    type: "Point",
+    coordinates: [100.6456, 13.7628],
+  },
+};
 
 // Camera imageryProvider={false}
 
@@ -164,6 +211,8 @@ const App = () => (
     minimumPixelSize={128}
     maximumScale={20000}
      />
+
+        
 
 
     <ImageryLayer
@@ -196,6 +245,11 @@ const App = () => (
       // }
       // isBaseLayer={true}
     />
+    
+
+    <GeoJsonDataSource data={data} />
+    <GeoJsonDataSource data={data2} />
+    <GeoJsonDataSource data={data3} />
     
     
 
