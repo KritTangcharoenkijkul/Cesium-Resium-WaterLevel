@@ -175,7 +175,7 @@ const App = () => (
           //local
           
           url : 'http://ec2-34-201-61-135.compute-1.amazonaws.com:8080/geoserver/wms',
-          layers : 'WaterLevelSystem:data_logger_model_wms',
+          layers : 'WaterLevelSystem:data_logger_model',
           // layers : 'WaterLevelSystem:data_logger_model',
           proxy : 'http://ec2-34-201-61-135.compute-1.amazonaws.com:8080/geoserver/ows',
           style: "default",
