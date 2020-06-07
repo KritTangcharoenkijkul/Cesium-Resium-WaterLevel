@@ -139,11 +139,11 @@ const data = {
   type: "Feature",
   properties: {
     sensor: "1",
-    water_level: "51",
-    longitude: "100.7763",
-    latitude: "13.7299",
-    date: "04/06/2020",
-    time: "19:20:36",
+    water_level_mm: "55",
+    longitude: "100.7783",
+    latitude: "13.7628",
+    date: "07/06/2020",
+    time: "17:13:26",
   },
   geometry: {
     type: "Point",
@@ -155,15 +155,15 @@ const data2 = {
   type: "Feature",
   properties: {
     sensor: "2",
-    water_level: "63",
-    longitude: "100.6087",
-    latitude: "13.8242",
-    date: "04/06/2020",
-    time: "19:20:37",
+    water_level_mm: "99",
+    longitude: "100.6456",
+    latitude: "13.7628",
+    date: "07/06/2020",
+    time: "17:13:38",
   },
   geometry: {
     type: "Point",
-    coordinates: [100.6087, 13.8242],
+    coordinates: [100.6456, 13.7628],
   },
 };
 
@@ -171,15 +171,15 @@ const data3 = {
   type: "Feature",
   properties: {
     sensor: "3",
-    water_level: "12",
-    longitude: "100.6456",
-    latitude: "13.7628",
-    date: "04/06/2020",
-    time: "19:25:37",
+    water_level_mm: "21",
+    longitude: "100.6087",
+    latitude: "13.8242",
+    date: "07/06/2020",
+    time: "17:12:59",
   },
   geometry: {
     type: "Point",
-    coordinates: [100.6456, 13.7628],
+    coordinates: [100.6087, 13.8242],
   },
 };
 
