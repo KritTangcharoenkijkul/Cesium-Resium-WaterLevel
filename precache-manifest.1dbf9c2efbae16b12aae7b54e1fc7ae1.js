@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e368c964595e7962305b42a2c38c2244",
+    "revision": "f3cdf6c3f90ac456af639b396fdb65db",
     "url": "/Cesium-Resium-WaterLevel/index.html"
   },
   {
-    "revision": "7c02e97584aa5135d0c3",
+    "revision": "7c5bde777cd1927031c4",
     "url": "/Cesium-Resium-WaterLevel/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Cesium-Resium-WaterLevel/static/js/2.23162ce9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c02e97584aa5135d0c3",
-    "url": "/Cesium-Resium-WaterLevel/static/js/main.632a2afb.chunk.js"
+    "revision": "7c5bde777cd1927031c4",
+    "url": "/Cesium-Resium-WaterLevel/static/js/main.4d510496.chunk.js"
   },
   {
     "revision": "0985ce76e50f2262261c",
     "url": "/Cesium-Resium-WaterLevel/static/js/runtime-main.63dce173.js"
   },
   {
-    "revision": "21beb29285022d02148731bb9f817dcd",
-    "url": "/Cesium-Resium-WaterLevel/static/media/truesensor2.21beb292.gltf"
+    "revision": "b0444009fe01984ff81f8974f719f0b3",
+    "url": "/Cesium-Resium-WaterLevel/static/media/endsensor.b0444009.gltf"
   }
 ]);
