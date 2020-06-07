@@ -122,6 +122,8 @@ import React from "react";
 import { Viewer,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo, ImageryLayerCollection, GeoJsonDataSource } from "resium";
 import {  WebMapServiceImageryProvider, Camera, Color, button, Ion, Cesium,  Cartesian3, Transforms, BingMapsApi, ImageryProviderViewModel, ProviderViewModel } from "cesium";
 import glbs from "C:/Users/user/Desktop/craco-cesium-master/example/src/endsensor.gltf";
+import glbsmall from "C:/Users/user/Desktop/craco-cesium-master/example/src/smalltest.gltf";
+import glblarge from "C:/Users/user/Desktop/craco-cesium-master/example/src/largetest.gltf";
 import './App.css'
 
 BingMapsApi.defaultKey = 'Apwuw8J82n9rnuXUcLTiiqerkws2jLzK_UWa_as9CXtLnvL9py71qGumTgmAPbde';
@@ -137,6 +139,7 @@ const cameraseen = Cartesian3.fromDegrees(100.7783, 13.7628);
 
 const data = {
   type: "Feature",
+  
   properties: {
     sensor: "1",
     water_level_mm: "55",
@@ -148,6 +151,7 @@ const data = {
   geometry: {
     type: "Point",
     coordinates: [100.7783, 13.7628],
+    
   },
 };
 
@@ -181,6 +185,7 @@ const data3 = {
     type: "Point",
     coordinates: [100.6087, 13.8242],
   },
+
 };
 
 // Camera imageryProvider={false}
@@ -200,18 +205,17 @@ const App = () => (
     maximumScale={200000}
      />
 
-    <Model url={glbs}
+    <Model url={glblarge}
     modelMatrix={modelMatrix2}
     minimumPixelSize={250}
     maximumScale={200000}
      />
 
-    <Model url={glbs}
+    <Model url={glbsmall}
     modelMatrix={modelMatrix3}
     minimumPixelSize={250}
     maximumScale={200000}
      />
-     <button>Retry</button>
 
         
 
@@ -248,13 +252,10 @@ const App = () => (
     />
     
 
-    <GeoJsonDataSource data={data} />
-    <GeoJsonDataSource data={data2} />
-    <GeoJsonDataSource data={data3} />
+    <GeoJsonDataSource data={data} fill={Color.YELLOW} />
+    <GeoJsonDataSource data={data2} fill={Color.YELLOW} />
+    <GeoJsonDataSource data={data3} fill={Color.YELLOW} />
     
-    
-
-
   </Viewer>
 
 );
