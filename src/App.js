@@ -121,7 +121,7 @@
 import React from "react";
 import { Viewer,  ImageryLayer, addToolbarMenu, Model, CameraFlyTo, ImageryLayerCollection, GeoJsonDataSource } from "resium";
 import {  WebMapServiceImageryProvider, Camera, Color, button, Ion, Cesium,  Cartesian3, Transforms, BingMapsApi, ImageryProviderViewModel, ProviderViewModel } from "cesium";
-import glbs from "C:/Users/user/Desktop/craco-cesium-master/example/src/truesensor2.gltf";
+import glbs from "C:/Users/user/Desktop/craco-cesium-master/example/src/endsensor.gltf";
 import './App.css'
 
 BingMapsApi.defaultKey = 'Apwuw8J82n9rnuXUcLTiiqerkws2jLzK_UWa_as9CXtLnvL9py71qGumTgmAPbde';
@@ -196,21 +196,22 @@ const App = () => (
   </addToolbarMenu>
     <Model url={glbs}
     modelMatrix={modelMatrix}
-    minimumPixelSize={128}
-    maximumScale={20000}
+    minimumPixelSize={250}
+    maximumScale={200000}
      />
 
     <Model url={glbs}
     modelMatrix={modelMatrix2}
-    minimumPixelSize={128}
-    maximumScale={20000}
+    minimumPixelSize={250}
+    maximumScale={200000}
      />
 
     <Model url={glbs}
     modelMatrix={modelMatrix3}
-    minimumPixelSize={128}
-    maximumScale={20000}
+    minimumPixelSize={250}
+    maximumScale={200000}
      />
+     <button>Retry</button>
 
         
 
